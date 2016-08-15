@@ -7,20 +7,24 @@ Programs that perform the four phases
 4. linker
 
 - preprocessing phase
+
 For example, the `#include <stdio.h>` command in line 1 of `hello.c` tells preprocessor to read the contents
 of the system header file `stdio.h` and insert it directly into the program text.
 
 The result is another C program, typically with the .i suffix.
 
 - Complication phase
+
 The compiler(cc1) translates the text file `hello.i` into text file `hello.s` which contains an *assembly-language
 program*. 
 
 - Assembly phase
+
 The assembler (as) translates `hello.s` into machine-language instructions, packages them in a form known as a
 *relocatable object program*, and stores the result in the object file `hello.o.`
 
 - Linking phase
+
 The `printf` function resides in a separate precompiled object file called `printf.o`, which must somehow be
 merged with `hello.o`. The linker(ld) handles this merging.
 
